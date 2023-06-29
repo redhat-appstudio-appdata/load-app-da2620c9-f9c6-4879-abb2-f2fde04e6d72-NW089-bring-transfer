@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-python-basic-grgv
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-python-basic-grgv
+    app.kubernetes.io/part-of: load-app-da2620c9-f9c6-4879-abb2-f2fde04e6d72
+  name: devfile-sample-python-basic-grgv
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: devfile-sample-python-basic-grgv
+status:
+  loadBalancer: {}
